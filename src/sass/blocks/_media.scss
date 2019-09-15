@@ -1,3 +1,6 @@
+
+
+
 @media (max-width: 992px) {
     .container {
         padding-right: 20px;
@@ -23,14 +26,27 @@
             width: 215px;
         }
     }
+
+    .consultation {
+        padding: 80px 0 !important;
+        &__sudtitle {
+            font-size: 19px !important;
+            line-height: 20px;
+        }
+    }
+
 }
 
+
+
 @media (max-width: 768px) {
+
     .header {
         &__imagine {
             display: none;
         }
     }
+
     .Main {
         padding-bottom: 78px;
         &__head {
@@ -41,6 +57,7 @@
             font-size: 19px;
         }
     }
+
     .advantages {
         padding: 70px 0;
         &__wrapper {
@@ -50,7 +67,7 @@
         &__item {
             display: flex;
             width: 500px;
-            align-items: flex-end;
+            align-items: center;
             margin-top: 38px;
             justify-content: center;
             .icon {
@@ -69,12 +86,25 @@
             }
         }
     }
+
+    .consultation {
+        &__sudtitle {
+            font-size: 17px !important;
+            line-height: 20px;
+        }
+    }
+         
+}
     
+
+
 @media (max-width: 576px) {
+
     .container {
         padding-right: 10px;
         padding-left: 10px;
     }
+
     .header {
         &__logo {
             margin-right: 17px;
@@ -86,6 +116,7 @@
             }
         }
     }
+
     .Main {
         padding-bottom: 53px;
         &__head {
@@ -116,6 +147,7 @@
             margin-top: 16px;
         }
     }
+
     .advantages {
         padding: 45px 0;
         &__item {
@@ -134,21 +166,13 @@
         }
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .consultation {
+        padding: 65px 0!important;
+        &__sudtitle {
+            font-size: 16px !important;
+            text-align: center;
+        }
+    }
 
 }
 
@@ -173,4 +197,3 @@
 
 
 
-}
