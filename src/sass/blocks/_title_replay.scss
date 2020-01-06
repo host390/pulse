@@ -1,0 +1,27 @@
+
+
+.title_replay { 
+    text-align: center;
+    color: #0d0d0d;
+    font-family: "Museo Sans Cyrl 700";
+    font-size: 30px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+@media (max-width: 992px) {
+    .title_replay {
+    }
+}
+
+@media (max-width: 768px) {
+    .title_replay {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 576px) {
+    .title_replay {
+        font-size: 20px;
+    }
+}

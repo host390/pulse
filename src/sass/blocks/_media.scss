@@ -1,25 +1,25 @@
 
 
-
 @media (max-width: 992px) {
+    
     .container {
         padding-right: 20px;
         padding-left: 20px;
     }
-
-    .Main {
-        &__right_block {
+    
+    .main {
+        &__welcome_wrap {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-        &__icons {
+        &__wrapper_icons {
             margin-right: 0px;
         }
     }
 
-    .advantages {
-        &__wrapper {
+    .vantage {
+        &__wrapper_items {
             justify-content: space-around;
         }
         &__item {
@@ -27,17 +27,35 @@
         }
     }
 
-    .consultation {
-        padding: 80px 0 !important;
+    .advice {
+        padding: 80px 0;
+        &__title {
+            font-size: 28px;
+            line-height: 37px;
+            margin-bottom: 55px;
+        }
         &__sudtitle {
-            font-size: 19px !important;
+            font-size: 19px;
             line-height: 20px;
         }
     }
 
+    .shop .container {
+        max-width: 951px;
+    }
+
+    .shop {
+        &__list_items {
+            margin: 30px 0px 10px 0px;
+        }
+
+        &__wrapper_frames {
+            &_active {
+                justify-content: center;
+            }
+        }
+    }
 }
-
-
 
 @media (max-width: 768px) {
 
@@ -47,9 +65,9 @@
         }
     }
 
-    .Main {
+    .main {
         padding-bottom: 78px;
-        &__head {
+        &__title {
             font-size: 35px;
             margin-top: 78px;
         }
@@ -58,9 +76,9 @@
         }
     }
 
-    .advantages {
+    .vantage {
         padding: 70px 0;
-        &__wrapper {
+        &__wrapper_items {
             flex-direction: column;
             align-items: center;
         }
@@ -70,33 +88,58 @@
             align-items: center;
             margin-top: 38px;
             justify-content: center;
-            .icon {
+            img {
                 margin: 0 20px 0 0;
             }
-            .hidden-576 {
-                display: none;
-            }
-            .text {
-                margin: 0;
-                text-align: left;
-                .visible-576 {
-                    display: block;
-                    margin: 0 0 8px 0;
-                }
-            }
+        }
+        &__title {
+            display: block;
+            margin: 0 0 8px 0;
+            text-align: left;
+        }
+        &__hide_small_768 {
+            display: none;
+        }
+        &__descrip {
+            margin: 0;
+            text-align: left;
         }
     }
 
-    .consultation {
+    .advice {
+        &__title {
+            line-height: 33px;
+            font-size: 24px;
+        }
         &__sudtitle {
-            font-size: 17px !important;
+            font-size: 17px;
             line-height: 20px;
         }
     }
+
+    .carousel {
+        &__wapper_img {
+            width: 100%;
+            img {
+                width: 95%;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .shop {
+        &__list_items {
+            margin: 30px 1px 10px 1px;
+        }
+
+        // &__wrapper_frames {
+        //     &_active {
+        //         justify-content: center;
+        //     }
+        // }
+    }
          
 }
-    
-
 
 @media (max-width: 576px) {
 
@@ -111,22 +154,22 @@
         }
         &__phone_box {
             align-items: center;
-            .phone {
-                font-size: 13px;
-            }
+        }
+        &__phone_number {
+            font-size: 13px;
         }
     }
 
-    .Main {
+    .main {
         padding-bottom: 53px;
-        &__head {
+        &__title {
             font-size: 24px;
             margin-top: 43px;
         }
         &__subtitle {
             font-size: 12px;
         }
-        &__icons {
+        &__wrapper_icons {
             justify-content: center;
             flex-wrap: wrap;
             width: 320px;
@@ -148,31 +191,46 @@
         }
     }
 
-    .advantages {
+    .vantage {
         padding: 45px 0;
         &__item {
             width: 235px;
             display: block;
-            .icon {
+            img {
                 margin: 0 auto;
                 margin-bottom: 20px;
             }
-            .hidden-576 {
-                margin-bottom: 10px;
-            }
-            .text {
-                text-align: center;
-            }
         }
+        &__title {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        &__descrip {
+            text-align: center;
+        } 
     }
 
-    .consultation {
-        padding: 65px 0!important;
+    .advice {
+        padding: 65px 0;
+        &__title {
+            line-height: 33px;
+            text-align: center;
+            margin-bottom: 37px;
+            font-size: 26px;
+        }
         &__sudtitle {
-            font-size: 16px !important;
+            font-size: 16px;
             text-align: center;
         }
     }
+
+    .shop {
+        &__list_items {
+            margin: 30px 10% 10px 10%;
+        }
+    }
+
+
 
 }
 

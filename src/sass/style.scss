@@ -6,16 +6,24 @@
 // }
 
 .container {
+    position: relative;
     max-width: 947px;
     margin: 0 auto;
 }
 
 
-@import 'blocks/main';
-@import 'blocks/button';
-@import 'blocks/advantages';
 @import 'blocks/header';
+@import 'blocks/main';
+@import 'blocks/vantage';
+@import 'blocks/advice';
+@import 'blocks/carousel';
+@import 'blocks/shop';
+
 @import 'blocks/media';
-@import 'blocks/title';
-@import 'blocks/consultation';
+
+
 @import 'blocks/forms';
+
+//Duplicates
+@import 'blocks/title_replay';
+@import 'blocks/buttons';

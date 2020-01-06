@@ -1,15 +1,15 @@
 
 
-.Main {
+.main {
     // min-height: 556px;
-    background: url('../../img/bg/main.jpg') center (center/cover) no-repeat;
+    background: url('../img/bg/main.jpg') center (center/cover) no-repeat;
     padding: 21px 0 93px 0;
-    &__right_block {
+    &__welcome_wrap {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
     }
-    &__head {
+    &__title {
         margin: 99px 0 0 0;
         color: #ffffff;
         font-family: "Museo Sans Cyrl 700";
@@ -23,7 +23,7 @@
         text-transform: uppercase;
         margin-top: 12px;
     }
-    &__icons {
+    &__wrapper_icons {
         display: flex;
         justify-content: space-between;
         width: 425px;

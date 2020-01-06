@@ -25,14 +25,15 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        .phone {
-            color: #ffffff;
-            font-family: "Museo Sans Cyrl 700";
-            font-size: 18px;
+    }
+    &__phone_number {
+        color: #ffffff;
+        font-family: "Museo Sans Cyrl 700";
+        font-size: 18px;
+        text-decoration: none;
+        &:hover {
             text-decoration: none;
-            &:hover {
-                text-decoration: none;
-            }
         }
     }
+    
 }

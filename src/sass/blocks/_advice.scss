@@ -1,0 +1,22 @@
+
+
+.advice {
+    // min-height: 680px;
+    background: url('../img/bg/bg2.jpg') center (center/cover) no-repeat;
+    padding: 100px 0 92px 0;
+    &__title {
+        text-align: left;
+        color: #ffffff;
+        font-size: 36px;
+        text-transform: uppercase;
+        line-height: 45px;
+        margin-bottom: 77px;
+        font-family: "Museo Sans Cyrl 700";
+    }
+    &__sudtitle {
+        color: #ffffff;
+        font-family: "Museo Sans Cyrl 500";
+        font-size: 20px;
+        margin-bottom: 35px;
+    }
+}

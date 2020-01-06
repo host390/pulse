@@ -1,0 +1,41 @@
+
+
+.vantage {
+    // min-height: 329px;
+    background-color: #f6f6f6;
+    padding: 70px 0 95px 0;
+    &__wrapper_items {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        width: 243px;
+        margin-top: 65px;
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    &__title {
+        text-align: center;
+        color: #0d0d0d;
+        font-family: "Museo Sans Cyrl 700";
+        font-size: 18px;
+        margin: 35px 0 0 0;
+    }
+    &__show_small_768{
+        display: none;
+    }
+    &__descrip {
+        color: #0d0d0d;
+        font-family: "Museo Sans Cyrl 300";
+        font-size: 14px;
+        text-align: center;
+        margin-top: 22px;
+        line-height: 21px;
+        a {
+            color: #ff0000;
+            text-decoration: underline;
+        }
+    }
+}

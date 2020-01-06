@@ -1,0 +1,69 @@
+
+
+.carousel {
+    padding: 81px 0;
+    &__wapper_img {
+        position: relative;
+        margin: 0 auto;
+        width: 750px;
+        .slick-dots {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            padding: 0;
+            li {
+                margin-right: 25px;
+                &:last-child {
+                    margin-right: 0;
+                }
+                button {
+                    border-radius: 100%;
+                    border: none;
+                    width: 30px;
+                    height: 30px;
+                    outline: none;
+                    opacity: .20;
+                    background-color: $main_color;
+                    color: $main_color;
+                }
+            }
+            .slick-active {
+                button {
+                    outline: none;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    /* Для slick
+    .slick-prev, .slick-next {
+    */
+    // .prev, .next {
+    .slick-prev, .slick-next {
+        position: absolute;
+        top: 50%;
+        left: -101px;
+        transform: translateY(-50%);
+        border: none;
+        background: white;
+        outline: none;
+        img {
+            display: block;
+        }
+    }
+    // .next {
+    //     left: auto;
+    //     right: -101px;
+    // }
+    // .tns-item {
+    //     img {
+    //         display: block;
+    //         margin: 0 auto;
+    //         width: 750px;
+    //     }
+    // }
+    .slick-next {
+        left: auto;
+        right: -101px; 
+    }
+}
