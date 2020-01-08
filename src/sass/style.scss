@@ -4,6 +4,9 @@
 // * {
 //     font-family: 'Museo Sans Cyrl';
 // }
+body , html {
+    position: relative;
+}
 
 .container {
     position: relative;
@@ -18,6 +21,15 @@
 @import 'blocks/advice';
 @import 'blocks/carousel';
 @import 'blocks/shop';
+@import 'blocks/comments';
+@import 'blocks/map';
+
+
+@import 'modalWindows/blackout';
+@import 'modalWindows/modalForm';
+@import 'modalWindows/buy';
+@import 'modalWindows/thanks';
+
 
 @import 'blocks/media';
 

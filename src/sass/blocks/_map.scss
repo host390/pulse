@@ -1,0 +1,49 @@
+
+
+
+.map {
+    min-height: 630px;
+    background: url('../../img/bg/map.png') center (center/cover) no-repeat;
+    &__dataLaible {
+        width: 460px;
+        background-color: $main_color;
+        margin: 0 auto;
+        padding: 50px 0 60px 0;
+    }
+    &__dataLaible_address {
+        color: #ffffff;
+        font-family: "Museo Sans Cyrl 500";
+        font-size: 20px;
+        margin-bottom: 36px;
+        text-align: center;
+    }
+    &__dataLaible_phone {
+        color: #ffffff;
+        font-family: "Museo Sans Cyrl 700";
+        font-size: 20px;
+        margin: 0 auto 38px auto;
+        display: block;
+        text-decoration: none;
+        width: 172px;
+    }
+    &__dataLaible_messengers {
+        display: flex;
+        justify-content: center;
+        .circle {
+            width: 50px;
+            height: 50px;
+            border: 2px solid #ffffff;
+            border-radius: 100%;
+            margin-right: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:last-child {
+                margin-right: 0;
+            }
+            img {
+                display: block;
+            }
+        }
+    }
+}

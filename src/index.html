@@ -20,13 +20,61 @@
 
 </head>
 <body>
+	<!-- Modal Windows -->
 
+	<div class="blackout">
+	</div>
+
+	<div class="modalForm">
+		<div class="modalForm__heading">Просто заполните форму заявки</div>
+		<div class="modalForm__subtitle">и мы перезвоним вам в течении 10 минут</div>
+		<button class="modalForm__closeBut but_close_form">
+			<span class="modalForm__closeBut_right"></span>
+			<span class="modalForm__closeBut_left"></span>
+		</button>
+		<form action="#" class="modalForm__form form_global">
+			<input name="name" required  placeholder="Ваше имя" type="text">
+			<input name="tel" required  placeholder="Ваш телефон" type="number">
+			<input name="email" required  placeholder="Ваш E-mail" type="email">
+			<button class="but but_form consultation_go">заказать консультацию</button>
+		</form>
+	</div>
+
+	<div class="modalBuy modalForm">
+		<div class="modalForm__heading">Ваш заказ:</div>
+		<div id="modalBuy__ProductName" class="modalForm__subtitle">заказ из js</div>
+		<button class="modalForm__closeBut but_close_form">
+			<span class="modalForm__closeBut_right"></span>
+			<span class="modalForm__closeBut_left"></span>
+		</button>
+		<form action="#" class="modalForm__form form_global">
+			<input name="name" required  placeholder="Ваше имя" type="text">
+			<input name="tel" required  placeholder="Ваш телефон" type="number">
+			<input name="email" required  placeholder="Ваш E-mail" type="email">
+			<button class="but but_form">Купить</button>
+		</form>
+	</div>
+
+	<div class="thanks modalForm">
+		<div class="modalForm__heading">Спасибо за вашу заявку!</div>
+		<div class="thanks__subtitle modalForm__subtitle">
+			Наш менеджер свяжется с вами <br> в ближайшее время!
+		</div>
+		<button class="modalForm__closeBut but_close_form">
+			<span class="modalForm__closeBut_right"></span>
+			<span class="modalForm__closeBut_left"></span>
+		</button>
+	</div>
+
+
+
+	
+	<!-- blocks -->
     <section class="main">
         <div class="container">
 
-
             <header class="header">
-                <a href="#" class="header__logo">
+                <a href="#shop_anchor" class="header__logo">
                     <img src="img/logo/logo.png" alt="logo">
                 </a>
 
@@ -36,11 +84,12 @@
                 </div>
 
                 <div class="header__phone_box">
-                    <a href="#" class="header__phone_number">+7 (499) 922-89-74</a>
-                    <button class="but">заказать звонок</button>
+                    <a href="#" class="header__phone_number ringing_phone">
+						+7 (499)922-89-74
+					</a>
+                    <button class="but but_show_form">заказать звонок</button>
                 </div>
             </header>
-
 
             <div class="main__welcome_wrap">
                 <h1 class="main__title">Подбор пульсометра</h1>
@@ -63,10 +112,10 @@
                     </div>
                 </div>
 
-                <button class="but but_main">заказать кОНСУЛЬТАЦИЮ</button>
+                <button class="but but_main but_show_form">заказать кОНСУЛЬТАЦИЮ</button>
                 <div class="main__link">
                     или
-                    <a href="#">ПЕРЕЙТИ В КАТАЛОГ</a>
+                    <a href="#shop_anchor">ПЕРЕЙТИ В КАТАЛОГ</a>
                 </div>
             </div>
         </div>
@@ -107,7 +156,7 @@
                         <h3 class="vantage__title vantage__show_small_768">Учим бегать</h3>
                         Помогаем с обучением правильной технике бега! 
                         Дружим с крупнейшей школой бега в России - 
-                        <a href="#">I LOVE RUNNING.</a>
+                        <a href="#" class='i_love_run'>I LOVE RUNNING.</a>
                     </div>
                 </div>
             </div>
@@ -132,32 +181,46 @@
                 <input name="name" required  placeholder="Ваше имя" type="text">
                 <input name="tel" required  placeholder="Ваш телефон" type="number">
                 <input name="email" required  placeholder="Ваш E-mail" type="email">
-                <button class="but but_form">заказать консультацию</button>
+                <button class="but but_form consultation_go">заказать консультацию</button>
             </form>
         </div>
     </section>
 
-
-
+    
     <section class="carousel">
+        <div class="carousel__wrapper">
+            <button id="previousButArrow"><img src="img/carousel/arrow-left.png" alt="next arrow"></button>
+            <div class="carousel__hidden_box">
+                <ul class="carousel__slider_wrapper">
+                    <li class="carousel__slider"><img src="img/carousel/icon1.png" class="main_img" alt="1"></li>
+                    <li class="carousel__slider"><img src="img/carousel/icon2.png" class="main_img" alt="2"></li>
+                    <li class="carousel__slider"><img src="img/carousel/icon3.png" class="main_img" alt="3"></li>
+                </ul>
+			</div>
+			<button id="nextButArrow"><img src="img/carousel/arrow-right.png" alt="next arrow"></button>
+			<div class="carousel__circle_wrapper"></div>
+        </div>
+    </section>
+
+    <!-- <section class="carousel">
         <div class="container">
             <div class="carousel__wapper_img">
                 <div><img src="img/carousel/icon1.png" alt="1"></div>
                 <div><img src="img/carousel/icon2.png" alt="2"></div>
                 <div><img src="img/carousel/icon3.png" alt="3"></div>
-            </div>
+            </div> -->
             <!-- tiny-slider -->
             <!-- <button type="button" class="prev"><img src="img/carousel/arrow-left.png"></button>
-            <button type="button" class="next"><img src="img/carousel/arrow-right.png"></button> -->
+            <button type="button" class="next"><img src="img/carousel/arrow-right.png"></button>
         </div>
-    </section>
+    </section> -->
 
 
 
     <section class="shop">
         <div class="container">
 
-            <div class="title_replay">Каталог пульсометров</div>
+            <div class="title_replay" id='shop_anchor'>Каталог пульсометров</div>
 
             <ul class="shop__list_items">
                 <li class="shop__item shop__item_active"><div>Для фитнеса</div></li>
@@ -171,7 +234,7 @@
 
                 <div class="shop__frame">
                     <div class="shop__wrapper_change">
-                        <!-- front_side_active -->
+                    
                         <div class="front_side front_side_active">
                             <img src="img/icons/shop-icon.jpg" alt="shop-icon">
                             <div class="title">Пульсометр Polar FT1</div>
@@ -201,7 +264,7 @@
 
                 <div class="shop__frame">
                     <div class="shop__wrapper_change">
-                        <!-- front_side_active -->
+                        
                         <div class="front_side">
                             <img src="img/icons/shop-icon.jpg" alt="shop-icon">
                             <div class="title">Пульсометр Suunto M2</div>
@@ -231,7 +294,7 @@
 
                 <div class="shop__frame">
                     <div class="shop__wrapper_change">
-                        <!-- front_side_active -->
+                        
                         <div class="front_side">
                             <img src="img/icons/shop-icon.jpg" alt="shop-icon">
                             <div class="title">Пульсометр Polar FT3</div>
@@ -261,7 +324,7 @@
                 
                 <div class="shop__frame">
                     <div class="shop__wrapper_change">
-                        <!-- front_side_active -->
+                         
                         <div class="front_side front_side_active">
                             <img src="img/icons/shop-icon.jpg" alt="shop-icon">
                             <div class="title">Пульсометр Polar FT4</div>
@@ -291,7 +354,7 @@
 
                 <div class="shop__frame">
                     <div class="shop__wrapper_change">
-                        <!-- front_side_active -->
+                        
                         <div class="front_side">
                             <img src="img/icons/shop-icon.jpg" alt="shop-icon">
                             <div class="title">Пульсометр Polar FT1</div>
@@ -321,7 +384,7 @@
 
                 <div class="shop__frame">
                     <div class="shop__wrapper_change">
-                        <!-- front_side_active -->
+                         
                         <div class="front_side">
                             <img src="img/icons/shop-icon.jpg" alt="shop-icon">
                             <div class="title">Пульсометр Polar FT1</div>
@@ -351,7 +414,7 @@
                 
                 <div class="shop__frame">
                     <div class="shop__wrapper_change">
-                        <!-- front_side_active -->
+                         
                         <div class="front_side">
                             <img src="img/icons/shop-icon.jpg" alt="shop-icon">
                             <div class="title">Пульсометр Polar FT1</div>
@@ -383,7 +446,7 @@
                     <div class="shop__wrapper_change">
                         <div class="front_side">
                             <img src="img/icons/shop-icon.jpg" alt="shop-icon">
-                            <div class="title">Пульсометр Polar FT1</div>
+                            <div class="title">Привет типа</div>
                             <div class="descrip">Для первых шагов в тренировках, основанных на сердечном ритме</div>
                             <a href="#" class="link" id="showDescription">ПОДРОБНЕЕ</a>
                         </div>
@@ -415,7 +478,7 @@
 
                 <div class="shop__frame">
                     <div class="shop__wrapper_change">
-                        <!-- front_side_active -->
+                         
                         <div class="front_side">
                             <img src="img/icons/shop-icon.jpg" alt="shop-icon">
                             <div class="title">Пульсометр Polar FT1</div>
@@ -445,7 +508,7 @@
 
                 <div class="shop__frame">
                     <div class="shop__wrapper_change">
-                        <!-- front_side_active -->
+                        
                         <div class="front_side">
                             <img src="img/icons/shop-icon.jpg" alt="shop-icon">
                             <div class="title">Пульсометр Polar FT1</div>
@@ -480,7 +543,6 @@
 
                 <div class="shop__frame">
                     <div class="shop__wrapper_change">
-                        <!-- front_side_active -->
                         <div class="front_side">
                             <img src="img/icons/shop-icon.jpg" alt="shop-icon">
                             <div class="title">Пульсометр Polar FT1</div>
@@ -510,7 +572,7 @@
                 
                 <div class="shop__frame">
                     <div class="shop__wrapper_change">
-                        <!-- front_side_active -->
+                         
                         <div class="front_side">
                             <img src="img/icons/shop-icon.jpg" alt="shop-icon">
                             <div class="title">Пульсометр Polar FT2</div>
@@ -540,7 +602,7 @@
 
                 <div class="shop__frame">
                     <div class="shop__wrapper_change">
-                        <!-- front_side_active -->
+                         
                         <div class="front_side">
                             <img src="img/icons/shop-icon.jpg" alt="shop-icon">
                             <div class="title">Пульсометр Polar FT3</div>
@@ -570,7 +632,7 @@
                 
                 <div class="shop__frame">
                     <div class="shop__wrapper_change">
-                        <!-- front_side_active -->
+                         
                         <div class="front_side front_side_active">
                             <img src="img/icons/shop-icon.jpg" alt="shop-icon">
                             <div class="title">Пульсометр Polar FT4</div>
@@ -600,7 +662,7 @@
 
                 <div class="shop__frame">
                     <div class="shop__wrapper_change">
-                        <!-- front_side_active -->
+                         
                         <div class="front_side">
                             <img src="img/icons/shop-icon.jpg" alt="shop-icon">
                             <div class="title">Пульсометр Polar FT1</div>
@@ -630,7 +692,6 @@
 
                 <div class="shop__frame">
                     <div class="shop__wrapper_change">
-                        <!-- front_side_active -->
                         <div class="front_side">
                             <img src="img/icons/shop-icon.jpg" alt="shop-icon">
                             <div class="title">Пульсометр Polar FT1</div>
@@ -660,7 +721,7 @@
                 
                 <div class="shop__frame">
                     <div class="shop__wrapper_change">
-                        <!-- front_side_active -->
+                        
                         <div class="front_side">
                             <img src="img/icons/shop-icon.jpg" alt="shop-icon">
                             <div class="title">Пульсометр Polar FT1</div>
@@ -691,51 +752,84 @@
             </div>
                     
 
-                    <!-- <div class="shop__frame">
-                    <img src="img/icons/shop-icon.jpg" alt="shop-icon">
-                    <div class="title">Пульсометр Polar FT1</div>
-                    <div class="descrip">Для первых шагов в тренировках, основанных на сердечном ритме</div>
-                    <a href="#" class="link">ПОДРОБНЕЕ</a>
-                    <hr>
-                    <div class="shop__frame_footer">
-                        <div class="wrapper_prices">
-                            <div class="old_price">4 750 руб.</div>
-                            <div class="now_price">4 500 руб.</div>
-                        </div>
-                        <button class="but but_buy">КУПИТЬ</button>
-                    </div>
-                </div> -->
-
-
-            <!-- </div> -->
-
-
+       
 
 
     </section>
 
 
+    <section class="comments">
+		<div class="container">
 
+			<h2 class="title_replay">Наши преимущества</h2>
+			
+			<div class="comments__wrapper">
+				<img class="comments__avatar" src="img/icons/avatar_1.png" alt="1">
+				<div class="comments__info">
+					<div class="comments__info_username">Ирина Иванченко</div>
+					<div class="comments__info_marathon">2 полумарафона</div>
+					<div class="comments__info_text">
+						Не знала, что себе купить - обратилась к ребятам из RunSmart - подобрали пульсометр, который подошёл именно под мои цели и финансовые возможности.
+						Через некоторое время решила обновить гаджет - не раздумывая обратилась туда же.
+						<br><br>
+						Новые цели - новый гаджет!
+						<br><br>
+						Спасибо, RunSmart! 
+					</div>
+				</div>
+			</div>
 
+			<div class="comments__wrapper">
+				<img class="comments__avatar" src="img/icons/avatar_2.png" alt="1">
+				<div class="comments__info">
+					<div class="comments__info_username">Иван Сёмочкин</div>
+					<div class="comments__info_marathon">1 полумарафон</div>
+					<div class="comments__info_text">
+						Крутая штука-пульсометр. Обычно без них бегал. Оказывается только хуже себе делал. 
+						Купил пульсометр, ещё в подарок получил тренировку. Со мной вместе провели первую тренировку, научили пользоваться новым гаджетом. Также объяснили основы анатомии, составили план тренировок на месяц вперёд.
+						<br><br>
+						С ними подготовился к своему первому полумарафону! Спасибо!!!
+					</div>
+				</div>
+			</div>
 
+			<div class="comments__wrapper">
+				<img class="comments__avatar" src="img/icons/avatar_3.png" alt="1">
+				<div class="comments__info">
+					<div class="comments__info_username">Юлия Дашкина</div>
+					<div class="comments__info_marathon">2 полумарафона</div>
+					<div class="comments__info_text">
+						Долго не могла начать бегать, т.к. до этого несколько раз начинала, но становилось тяжело и я бросала. От друзей услышала о RunSmart и о беге с контролем пульса и решила попробовать.
+						<br><br>
+						Позвонила, ребята поинтересовались моими целями и подобрали очень интересный вариант со скидкой! Теперь бегаю и наслаждаюсь бегом! Пробежала уже 2 полумарафона и несколько более коротких забегов и не намерена останавливаться!
+						<br><br>
+						Спасибо!!! 
+					</div>
+				</div>
+			</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		</div>
+	</section>
+	
+	<footer class="map">
+		<div class="map__dataLaible">
+			<div class="map__dataLaible_address">Москва, Мясницкий проезд, д.3с1</div>
+			<a href="#" class="map__dataLaible_phone ringing_phone">
+				8 (499) 922-89-74
+			</a>
+			<div class="map__dataLaible_messengers">
+				<a href="#" class="circle fasebook_icon">
+					<img src="img/icons/fasebook_icon.png" alt="fasebook">
+				</a>
+				<a href="#" class="circle instagram_icon">
+					<img src="img/icons/instagram_icon.png" alt="instagram">
+				</a>
+				<a href="#" class="circle pinterest_icon">
+					<img src="img/icons/pinterest_icon.png" alt="pinterest">
+				</a>
+			</div>
+		</div>
+	</footer>
 
 
 
@@ -752,12 +846,14 @@
     
 
     <!-- slick carousel -->
-    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="slick/slick.min.js"></script>
-    <script src="slick/script.js"></script>
+    <script src="slick/script.js"></script> -->
     
-    <script src="js/script.js"></script>
+    <script src="js/myCarousel.js"></script>
+	<script src="js/script.js"></script>
+	<script src='js/forms.js'></script>
     
 </body>
 </html>

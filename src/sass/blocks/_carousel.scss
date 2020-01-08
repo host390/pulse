@@ -1,69 +1,67 @@
 
 
 .carousel {
-    padding: 81px 0;
-    &__wapper_img {
-        position: relative;
-        margin: 0 auto;
+    // min-height: 743px;
+    padding: 82px 0;
+    &__wrapper {
         width: 750px;
-        .slick-dots {
-            display: flex;
-            list-style: none;
-            justify-content: center;
-            padding: 0;
-            li {
-                margin-right: 25px;
-                &:last-child {
-                    margin-right: 0;
-                }
-                button {
-                    border-radius: 100%;
-                    border: none;
-                    width: 30px;
-                    height: 30px;
-                    outline: none;
-                    opacity: .20;
-                    background-color: $main_color;
-                    color: $main_color;
-                }
-            }
-            .slick-active {
-                button {
-                    outline: none;
-                    opacity: 1;
-                }
-            }
-        }
+        display: block;
+        margin: 0 auto;
+        position: relative;
     }
-    /* Для slick
-    .slick-prev, .slick-next {
-    */
-    // .prev, .next {
-    .slick-prev, .slick-next {
-        position: absolute;
-        top: 50%;
-        left: -101px;
-        transform: translateY(-50%);
-        border: none;
-        background: white;
-        outline: none;
+    &__hidden_box {
+        overflow: hidden;
+    }
+    &__slider_wrapper {
+        transition: all 0.5s;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        align-items: center;
+    }
+    &__slider {
+        display: block;
         img {
-            display: block;
+            width: 750px;
         }
     }
-    // .next {
-    //     left: auto;
-    //     right: -101px;
-    // }
-    // .tns-item {
-    //     img {
-    //         display: block;
-    //         margin: 0 auto;
-    //         width: 750px;
-    //     }
-    // }
-    .slick-next {
-        left: auto;
-        right: -101px; 
+    &__circle_wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 5px;
     }
+    &__circle {
+        background-color: $main_color;
+        opacity: 0.6;
+        border-radius: 100%;
+        border: none;
+        width: 30px;
+        height: 30px;
+        outline: none;
+        color: $main_color;
+        margin-left: 10px;
+        &:first-child {
+            margin-left: 0;
+        }
+        &_active {
+            background-color: $main_color;
+            opacity: 1;
+        }
+    }
+}
+.carousel #previousButArrow , #nextButArrow {
+    cursor: pointer;
+    position: absolute;
+    outline: none;
+    border: none;
+    background-color: white;
+    padding: 0;
+    left: -100px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel #nextButArrow {
+    left: 819px;
 }

@@ -39,6 +39,25 @@
             line-height: 20px;
         }
     }
+    
+    .carousel {
+        padding: 70px 0;
+        &__wrapper {
+            width: 550px;
+        }
+        &__slider {
+            img {
+                width: 560px;
+            }
+        }
+    }
+    .carousel #previousButArrow {
+        left: -85px;
+    }
+    .carousel #nextButArrow {
+        // left: 610px;
+        left: 614px;
+    }
 
     .shop .container {
         max-width: 951px;
@@ -53,6 +72,29 @@
             &_active {
                 justify-content: center;
             }
+        }
+    }
+
+    .comments {
+        &__wrapper {
+            width: 567px;
+            flex-direction: column;
+            margin-bottom: 70px;
+        }
+        &__avatar {
+            margin: 0 auto 31px auto;
+        }
+        &__info {
+            &_username {
+                text-align: center;
+                
+            }
+            &_marathon {
+                text-align: center;
+            }
+            // &_text {
+                
+            // }
         }
     }
 }
@@ -118,13 +160,23 @@
     }
 
     .carousel {
-        &__wapper_img {
+        &__wrapper {
             width: 100%;
-            img {
-                width: 95%;
-                margin: 0 auto;
-            }
         }
+        // &__slider {
+        //     img {
+        //         width: 100px;
+        //     }
+        //     &_active {
+        //         img {
+        //             width: 500px;
+        //         }
+        //     }
+        // }
+    }
+
+    .carousel #previousButArrow , #nextButArrow {
+        display: none;
     }
 
     .shop {
@@ -223,12 +275,33 @@
             text-align: center;
         }
     }
+    
+    .carousel {
+        padding: 65px 0;
+    }
 
     .shop {
         &__list_items {
             margin: 30px 10% 10px 10%;
         }
     }
+
+    .comments {
+        &__wrapper {
+            width: 100%;
+        }
+    }
+
+    .map {
+        &__dataLaible {
+            width: 320px;
+            padding: 35px 0 30px 0;
+        }
+        &__dataLaible_address {
+            font-size: 17px;
+        }
+    }
+
 
 
 

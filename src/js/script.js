@@ -95,7 +95,9 @@ function continueShowing () {
 			frameWrapActive.append(proceedBut)
 			
 			hiddenButt.remove()
-			event.preventDefault()
+
+			return location.href = '#shop_anchor'
+			// event.preventDefault()
 		})
 
 		for (let i = max; i < shopFrame.length; i++) {

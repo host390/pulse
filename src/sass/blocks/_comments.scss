@@ -1,0 +1,41 @@
+
+
+
+.comments {
+    // min-height: 948px;
+    &__wrapper {
+        display: flex;
+        width: 884px;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 0 auto;
+        margin-top: 70px;
+        margin-bottom: 101px;
+        &:last-child {
+            margin-bottom: 70px;
+        }
+    }
+    &__avatar {
+        border-radius: 100%;
+        margin-right: 61px;
+    }
+    &__info {
+        &_username {
+            color: #0d0d0d;
+            font-family: "Museo Sans Cyrl 700";
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        &_marathon {
+            color: #646464;
+            font-family: "Museo Sans Cyrl 300";
+            font-size: 14px;
+            margin-bottom: 19px;
+        }
+        &_text {
+            color: #0d0d0d;
+            font-family: "Museo Sans Cyrl 300";
+            font-size: 16px;
+        }
+    }
+}

@@ -1,0 +1,89 @@
+
+
+
+.modalForm {
+    display: none;
+    position: fixed;
+    padding: 35px 0 40px 0;
+    width: 380px;
+    // height: 380px;
+    background-color: #f2f2f2;
+    z-index: 1001;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 80px;
+    &__heading {
+        color: #0d0d0d;
+        font-family: "Museo Sans Cyrl 700";
+        font-size: 19px;
+        margin-bottom: 11px;
+        text-align: center;
+    }
+    &__subtitle {
+        color: #0d0d0d;
+        font-family: 'Museo Sans Cyrl 500';
+        font-size: 14px;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    &__form {
+        margin: 0 auto;
+    }
+    &__closeBut {
+        cursor: pointer;
+        border: none;
+        position: absolute;
+        width: 21px;
+        height: 21px;
+        top: -1px;
+        background-color: transparent;
+        left: 400px;
+        outline: 0;
+        &_right, &_left {
+            width: 3px;
+            height: 29px;
+            background-color: $main_color;
+            transform: rotate(45deg);
+            position: absolute;
+            top: -2px;
+        }
+        &_left {
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .modalForm {
+        width: 280px;
+        &__heading {
+            font-size: 15px;
+        }
+        &__subtitle {
+            font-size: 11px;
+        }
+        &__form {
+            width: 84% !important;
+        }
+        &__closeBut {
+            left: 105%;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .modalForm {
+        width: 267px;
+        left: 0;
+        transform: none;
+        margin-top: 75px;
+    }
+}
+
+
+@media (max-height: 506px) {
+    .modalForm {
+        position: absolute;
+    }
+
+}
