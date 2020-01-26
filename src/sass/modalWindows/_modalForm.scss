@@ -1,7 +1,18 @@
 
-
+.blackout {
+    display: none;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: .56);
+    z-index: 1000;
+    top: 0;
+    left: 0;
+}
 
 .modalForm {
+    top: 50%;
+    left: 50%;
     display: none;
     position: fixed;
     padding: 35px 0 40px 0;
@@ -9,9 +20,7 @@
     // height: 380px;
     background-color: #f2f2f2;
     z-index: 1001;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 80px;
+    transform: translate(-50%, -50%);
     &__heading {
         color: #0d0d0d;
         font-family: "Museo Sans Cyrl 700";
@@ -51,11 +60,18 @@
             transform: rotate(-45deg);
         }
     }
+    &__closeBut:hover .modalForm__closeBut_left{
+        background-color: #f30a0a;
+    }
+    &__closeBut:hover .modalForm__closeBut_right {
+        background-color: #f30a0a;
+    }
 }
 
 @media (max-width: 576px) {
     .modalForm {
         width: 280px;
+        padding-bottom: 25px;
         &__heading {
             font-size: 15px;
         }
@@ -75,7 +91,7 @@
     .modalForm {
         width: 267px;
         left: 0;
-        transform: none;
+        transform: none !important;
         margin-top: 75px;
     }
 }
@@ -84,6 +100,8 @@
 @media (max-height: 506px) {
     .modalForm {
         position: absolute;
+        margin-top: 30px;
+        transform: translate(-50%,0);
+        top: 0;
     }
-
 }

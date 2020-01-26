@@ -1,0 +1,58 @@
+
+
+.footer {
+    height: 630px;
+    position: relative;
+    &__dataLaible {
+        width: 460px;
+        background-color: $main_color;
+        margin: 0 auto;
+        padding: 50px 0 50px 0;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &__address {
+        color: #ffffff;
+        font-family: "Museo Sans Cyrl 500";
+        font-size: 20px;
+        margin-bottom: 35px;
+        text-align: center;
+        font-style: normal;
+    }
+    &__phone {
+        color: #ffffff;
+        font-family: "Museo Sans Cyrl 700";
+        font-size: 20px;
+        margin: 0 auto 35px auto;
+        display: block;
+        text-decoration: none;
+        width: 172px;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &__messengers {
+        display: flex;
+        justify-content: center;
+    }
+    &__mess {
+        width: 50px;
+        height: 50px;
+        border: 2px solid #ffffff;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 15px;
+        &:hover {
+            background-color: white;
+        }
+    }
+    &__mess:hover path {
+        fill: $main_color;
+    }
+}
+
+

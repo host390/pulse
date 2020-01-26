@@ -8,68 +8,70 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.min.css">
-
-    <!-- tiny-slider -->
-    <!-- <link rel="stylesheet" href="tiny-slider/tiny-slider.css"> -->
-
-    <!-- owlcarousel -->
-    <!-- <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css"> -->
-
-    <!-- slick carousel -->
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
 
 </head>
+
+	<!--
+        1) Загрузить на гитхаб
+	-->
+
 <body>
+
 	<!-- Modal Windows -->
 
 	<div class="blackout">
-	</div>
 
-	<div class="modalForm">
-		<div class="modalForm__heading">Просто заполните форму заявки</div>
-		<div class="modalForm__subtitle">и мы перезвоним вам в течении 10 минут</div>
-		<button class="modalForm__closeBut but_close_form">
-			<span class="modalForm__closeBut_right"></span>
-			<span class="modalForm__closeBut_left"></span>
-		</button>
-		<form action="#" class="modalForm__form form_global">
-			<input name="name" required  placeholder="Ваше имя" type="text">
-			<input name="tel" required  placeholder="Ваш телефон" type="number">
-			<input name="email" required  placeholder="Ваш E-mail" type="email">
-			<button class="but but_form consultation_go">заказать консультацию</button>
-		</form>
-	</div>
-
-	<div class="modalBuy modalForm">
-		<div class="modalForm__heading">Ваш заказ:</div>
-		<div id="modalBuy__ProductName" class="modalForm__subtitle">заказ из js</div>
-		<button class="modalForm__closeBut but_close_form">
-			<span class="modalForm__closeBut_right"></span>
-			<span class="modalForm__closeBut_left"></span>
-		</button>
-		<form action="#" class="modalForm__form form_global">
-			<input name="name" required  placeholder="Ваше имя" type="text">
-			<input name="tel" required  placeholder="Ваш телефон" type="number">
-			<input name="email" required  placeholder="Ваш E-mail" type="email">
-			<button class="but but_form">Купить</button>
-		</form>
-	</div>
-
-	<div class="thanks modalForm">
-		<div class="modalForm__heading">Спасибо за вашу заявку!</div>
-		<div class="thanks__subtitle modalForm__subtitle">
-			Наш менеджер свяжется с вами <br> в ближайшее время!
+		<div data-modal='form' class="modalForm">
+			<div class="modalForm__heading">Просто заполните форму заявки</div>
+            <div class="modalForm__subtitle">и мы перезвоним вам в течении 10 минут</div>
+            <button data-but-form='close' class="modalForm__closeBut">
+                <span class="modalForm__closeBut_right"></span>
+                <span class="modalForm__closeBut_left"></span>
+            </button>
+			
+			<form action="#" class="modalForm__form form_global">
+				<input name="name" data-pleis="name" placeholder="Ваше имя" type="text">
+				<input name="tel" data-pleis="phone" placeholder="Ваш телефон" type="text">
+				<input name="email" data-pleis="email" placeholder="Ваш E-mail" type="text">
+				<button data-but-form='push' class="but but_form">
+					заказать консультацию
+				</button>
+			</form>
+        </div>
+	
+		<div data-modal='buy' class="buy modalForm">
+			<div class="modalForm__heading">Ваш заказ:</div>
+			<div id="buy__ProductName" class="modalForm__subtitle">заказ из js</div>
+			<button data-but-form='close' class="modalForm__closeBut">
+				<span class="modalForm__closeBut_right"></span>
+				<span class="modalForm__closeBut_left"></span>
+			</button>
+			<form action="#" class="modalForm__form form_global">
+				<input name="name" data-pleis="name" placeholder="Ваше имя" type="text">
+				<input name="tel" data-pleis="phone" placeholder="Ваш телефон" type="text">
+				<input name="email" data-pleis="email" placeholder="Ваш E-mail" type="text">
+				<button class="but but_form">Купить</button>
+			</form>
 		</div>
-		<button class="modalForm__closeBut but_close_form">
-			<span class="modalForm__closeBut_right"></span>
-			<span class="modalForm__closeBut_left"></span>
-		</button>
+	
+		<div data-modal='thanks' class="thanks modalForm">
+			<div class="modalForm__heading">Спасибо за вашу заявку!</div>
+			<div class="thanks__subtitle modalForm__subtitle">
+				Наш менеджер свяжется с вами <br> в ближайшее время!
+			</div>
+			<button data-but-form='close' class="modalForm__closeBut">
+				<span class="modalForm__closeBut_right"></span>
+				<span class="modalForm__closeBut_left"></span>
+			</button>
+		</div>
+
 	</div>
-
-
 
 	
 	<!-- blocks -->
+
+
     <section class="main">
         <div class="container">
 
@@ -84,10 +86,10 @@
                 </div>
 
                 <div class="header__phone_box">
-                    <a href="#" class="header__phone_number ringing_phone">
+                    <a data-link-text="звоню..." href="#" class="header__phone_number">
 						+7 (499)922-89-74
 					</a>
-                    <button class="but but_show_form">заказать звонок</button>
+                    <button data-but-form='show' class="but">заказать звонок</button>
                 </div>
             </header>
 
@@ -112,7 +114,7 @@
                     </div>
                 </div>
 
-                <button class="but but_main but_show_form">заказать кОНСУЛЬТАЦИЮ</button>
+                <button data-but-form='show' class="but but_main">заказать кОНСУЛЬТАЦИЮ</button>
                 <div class="main__link">
                     или
                     <a href="#shop_anchor">ПЕРЕЙТИ В КАТАЛОГ</a>
@@ -120,7 +122,6 @@
             </div>
         </div>
     </section>
-
 
 
     <section class="vantage">
@@ -156,13 +157,14 @@
                         <h3 class="vantage__title vantage__show_small_768">Учим бегать</h3>
                         Помогаем с обучением правильной технике бега! 
                         Дружим с крупнейшей школой бега в России - 
-                        <a href="#" class='i_love_run'>I LOVE RUNNING.</a>
+                        <a href="#" data-link-text="Я бегать не люблю">
+                            I LOVE RUNNING.
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
 
 
     <section class="advice">
@@ -178,18 +180,23 @@
             </div>
 
             <form action="#" class="form_global">
-                <input name="name" required  placeholder="Ваше имя" type="text">
-                <input name="tel" required  placeholder="Ваш телефон" type="number">
-                <input name="email" required  placeholder="Ваш E-mail" type="email">
-                <button class="but but_form consultation_go">заказать консультацию</button>
+                <input name="name" data-pleis="name"  placeholder="Ваше имя" type="text">
+                <input name="tel" data-pleis="phone"  placeholder="Ваш телефон" type="text">
+                <input name="email" data-pleis="email"  placeholder="Ваш E-mail" type="text">
+                <button data-but-form='push' class="but but_form">
+					заказать консультацию
+				</button>
             </form>
         </div>
     </section>
 
-    
+
     <section class="carousel">
         <div class="carousel__wrapper">
-            <button id="previousButArrow"><img src="img/carousel/arrow-left.png" alt="next arrow"></button>
+            <button id="previousButArrow">
+                <div class="previous_img"></div>
+                <!-- <img src="img/carousel/arrow-left.png" alt="next arrow"> -->
+            </button>
             <div class="carousel__hidden_box">
                 <ul class="carousel__slider_wrapper">
                     <li class="carousel__slider"><img src="img/carousel/icon1.png" class="main_img" alt="1"></li>
@@ -197,24 +204,14 @@
                     <li class="carousel__slider"><img src="img/carousel/icon3.png" class="main_img" alt="3"></li>
                 </ul>
 			</div>
-			<button id="nextButArrow"><img src="img/carousel/arrow-right.png" alt="next arrow"></button>
+			<button id="nextButArrow">
+                <div class="next_img"></div>
+                <!-- <img src="img/carousel/arrow-right.png" alt="next arrow"> -->
+            </button>
+
 			<div class="carousel__circle_wrapper"></div>
-        </div>
+        </divs>
     </section>
-
-    <!-- <section class="carousel">
-        <div class="container">
-            <div class="carousel__wapper_img">
-                <div><img src="img/carousel/icon1.png" alt="1"></div>
-                <div><img src="img/carousel/icon2.png" alt="2"></div>
-                <div><img src="img/carousel/icon3.png" alt="3"></div>
-            </div> -->
-            <!-- tiny-slider -->
-            <!-- <button type="button" class="prev"><img src="img/carousel/arrow-left.png"></button>
-            <button type="button" class="next"><img src="img/carousel/arrow-right.png"></button>
-        </div>
-    </section> -->
-
 
 
     <section class="shop">
@@ -810,50 +807,64 @@
 
 		</div>
 	</section>
-	
-	<footer class="map">
-		<div class="map__dataLaible">
-			<div class="map__dataLaible_address">Москва, Мясницкий проезд, д.3с1</div>
-			<a href="#" class="map__dataLaible_phone ringing_phone">
+    
+    
+	<footer class="footer">
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.4202307551645!2d37.6448395019!3d55.76857302428516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a636edcd2ad%3A0x4c2ca101e2c8c617!2z0JzRj9GB0L3QuNGG0LrQuNC5INC_0YAt0LQsIDQvMywg0JzQvtGB0LrQstCwLCAxMDcwNzg!5e0!3m2!1sru!2sru!4v1578545933924!5m2!1sru!2sru" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="">
+        </iframe>
+
+		<div class="footer__dataLaible">
+			<address class="footer__address">Москва, Мясницкий проезд, д.3с1</address>
+			<a data-link-text="звоню..." href="#" class="footer__phone">
 				8 (499) 922-89-74
 			</a>
-			<div class="map__dataLaible_messengers">
-				<a href="#" class="circle fasebook_icon">
-					<img src="img/icons/fasebook_icon.png" alt="fasebook">
+			<div class="footer__messengers">
+				<a data-link-text="Нету Фйсасбуков ваших" href="#" class="footer__mess">
+                    <svg version="1.1" x="0px" y="0px"
+                        width="30px" height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">
+						<path id="facebook" fill: currentcolor;  fill="#ffffff" 
+							d="M17.252,11.106V8.65c0-0.922,0.611-1.138,1.041-1.138h2.643V3.459l-3.639-0.015
+							c-4.041,0-4.961,3.023-4.961,4.961v2.701H10v4.178h2.336v11.823h4.916V15.284h3.316l0.428-4.178H17.252z">
+						</path>
+					</svg>
+					
+					<!-- <img src="img/icons/facebook.svg" alt="fasebook"> -->
 				</a>
-				<a href="#" class="circle instagram_icon">
-					<img src="img/icons/instagram_icon.png" alt="instagram">
+				<a data-link-text="Инстакарточки тоже" href="#" class="footer__mess">
+
+
+					<svg version="1.1" x="0px" y="0px"
+						width="30px" height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">
+						<path id="instagram" fill="#ffffff" 
+							d="M22.107,3.415H7.893c-2.469,0-4.479,2.007-4.479,4.477v4.73v9.486c0,2.469,2.01,4.479,4.479,4.479h14.215
+							c2.469,0,4.479-2.01,4.479-4.479v-9.486v-4.73C26.586,5.421,24.576,3.415,22.107,3.415 M23.393,6.086l0.512-0.004v0.511v3.416
+							l-3.916,0.014l-0.012-3.928L23.393,6.086z M11.693,12.622c0.742-1.028,1.945-1.7,3.307-1.7s2.564,0.672,3.307,1.7
+							c0.484,0.67,0.771,1.49,0.771,2.379c0,2.248-1.828,4.078-4.078,4.078c-2.248,0-4.078-1.83-4.078-4.078
+							C10.922,14.112,11.211,13.292,11.693,12.622 M24.328,22.107c0,1.225-0.994,2.219-2.221,2.219H7.893
+							c-1.225,0-2.219-0.994-2.219-2.219v-9.486h3.459C8.832,13.356,8.664,14.159,8.664,15c0,3.494,2.842,6.335,6.336,6.335
+							s6.336-2.842,6.336-6.335c0-0.842-0.17-1.645-0.467-2.379h3.459V22.107z">
+						</path>
+					</svg>
+
+					<!-- <img src="img/icons/instagram_icon.png" alt="instagram"> -->
 				</a>
-				<a href="#" class="circle pinterest_icon">
-					<img src="img/icons/pinterest_icon.png" alt="pinterest">
+				<a data-link-text="Это что такое?" href="#" class="footer__mess">
+					<svg version="1.1" x="0px" y="0px"
+						width="30px" height="30px" viewBox="-62 0 512 512" enable-background="new 0 0 30 30" xml:space="preserve">	
+						<path fill="#ffffff"  d="m60.945312 	278.21875c.640626-1.597656 7.050782-26.230469 7.5-27.898438-10.007812-15.058593-21.125-64.371093-12.597656-104.398437 9.199219-58.730469 71.4375-87.601563 130.199219-87.601563v-.109374c73.570313.046874 128.640625 40.980468 128.699219 111.476562.046875 55.179688-33.195313 128.117188-89.957032 128.117188-.015624 0-.027343 0-.042968 0-20.257813 0-45.90625-9.1875-52.632813-18.210938-7.761719-10.398438-9.667969-23.230469-5.566406-36.941406 10.050781-32.082032 22.867187-70.511719 24.363281-96.136719 1.386719-24.183594-15.773437-39.917969-38.027344-39.917969-16.746093 0-38.496093 9.726563-49.335937 37.058594-8.953125 22.707031-8.761719 46.480469.585937 72.671875 3.644532 10.238281-16.15625 76.984375-22.5 98.71875-15.761718 53.992187-37.339843 122.304687-32.726562 160.347656l4.453125 36.605469 22.367187-29.3125c30.953126-40.519531 62.957032-145.332031 71.484376-170.835938 25.210937 32.648438 77.710937 33.585938 83.832031 33.585938 75.183593 0 160.4375-74.65625 158.019531-178.5625-2.121094-91.121094-68.808594-166.875-188.632812-166.875v.117188c-113.976563 0-180.5 60.835937-196.785157 137.703124-14.914062 71.273438 18.253907 125.519532 57.300781 140.398438zm0 0"/>
+						</path>
+					</svg>
+					<!-- <img src="img/icons/pinterest_icon.png" alt="pinterest"> -->
 				</a>
 			</div>
 		</div>
 	</footer>
-
-
-
-
-    <!-- tiny-slider -->
-    <!-- <script src="tiny-slider/tiny-slider.js"></script>
-    <script src="tiny-slider/script.js"></script> -->
-    
-    <!-- owlcarousel (Пока не понял, возможно не та версия Qquery) -->
-    <!-- <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="owlcarousel/owl.carousel.min.js"></script>
-    <script src="owlcarousel/script.js"></script> -->
     
 
-    <!-- slick carousel -->
-    <!-- <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="slick/slick.min.js"></script>
-    <script src="slick/script.js"></script> -->
-    
-    <script src="js/myCarousel.js"></script>
+
+
 	<script src="js/script.js"></script>
-	<script src='js/forms.js'></script>
     
 </body>
 </html>

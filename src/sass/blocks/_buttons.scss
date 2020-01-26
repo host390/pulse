@@ -12,6 +12,13 @@
     border: none;
     margin-top: 7px;
     cursor: pointer;
+    outline: none;
+    &:hover {
+        background-color: #f30a0a;
+    }
+    &:focus {
+        border: 2px solid #800606;
+    }
     &_main {
         width: 300px;
         height: 50px;

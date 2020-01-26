@@ -110,6 +110,9 @@
             width: 88px;
             margin: 0 auto;
             margin-top: 14px;
+            &:hover {
+                text-decoration: none;
+            }
         }
         hr {
             width: 260px;
