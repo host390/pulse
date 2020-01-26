@@ -64,18 +64,18 @@
     .previous_img, .next_img {
         width: 31px;
         height: 50px;
-        background: url('../../img/carousel/arrow-left.png') no-repeat;
+        background: url('../img/carousel/arrow-left.png') no-repeat;
         &:hover {
-            background: url('../../img/carousel/arrow-left_2.png') no-repeat;
+            background: url('../img/carousel/arrow-left_2.png') no-repeat;
         }
     }
 }
 .carousel #nextButArrow {
     left: 819px;
     .next_img {
-        background: url('../../img/carousel/arrow-right.png') no-repeat;
+        background: url('../img/carousel/arrow-right.png') no-repeat;
         &:hover {
-            background: url('../../img/carousel/arrow-right_2.png') no-repeat;
+            background: url('../img/carousel/arrow-right_2.png') no-repeat;
         }
     }
 
