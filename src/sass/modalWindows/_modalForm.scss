@@ -48,6 +48,7 @@
         background-color: transparent;
         left: 400px;
         outline: 0;
+        padding: 13px;
         &_right, &_left {
             width: 3px;
             height: 29px;
@@ -91,17 +92,22 @@
     .modalForm {
         width: 267px;
         left: 0;
-        transform: none !important;
-        margin-top: 75px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    @media (max-height: 506px) {
+        .modalForm {
+            transform: translate(0 ,0) !important;
+        }
     }
 }
-
 
 @media (max-height: 506px) {
     .modalForm {
         position: absolute;
-        margin-top: 30px;
-        transform: translate(-50%,0);
+        margin-top: 70px;
+        transform: translate(-50% ,0);
         top: 0;
     }
 }

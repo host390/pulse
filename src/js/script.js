@@ -277,6 +277,15 @@ window.addEventListener('DOMContentLoaded', () => {
 		else return
 	})
 
+	blackout.addEventListener('click', (e)=> {
+		if (event.target.classList.contains('blackout')) {
+			blackout.style.display = 'none'
+			form.style.display = 'none'
+			thanks.style.display = 'none'
+			buy.style.display = 'none'
+		} return
+	})
+
 	for (let i = 0; i < closeButtons.length; i++) {
 		closeButtons[i].addEventListener('click', function() {
 			blackout.style.display = 'none'
