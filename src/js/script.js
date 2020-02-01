@@ -302,7 +302,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
-
 	const createTextError = function (input, arr) {
 		let div = document.createElement('div')
 		
@@ -417,12 +416,42 @@ window.addEventListener('DOMContentLoaded', () => {
 					}
 				}
 			}
+			let arrErrors = []
 
 			for (let j = 0; j < forms[i].elements.length; j++) {
 				if (forms[i].elements[j].classList.contains('error')) {
 					event.preventDefault()
+					arrErrors.push(`Ошибка ${j}`)
 				}
 			}
+
+			if (arrErrors != '') {
+				alert ('Ошибка , блин')
+			} else {
+				event.preventDefault()
+				const arrInputValue = []
+				for (let j = 0; j < forms[i].elements.length; j++) {
+					if (forms[i].elements[j].tagName != 'BUTTON') {
+						arrInputValue.push(forms[i].elements[j].value)
+					}
+				}
+
+				let xhr = new XMLHttpRequest()
+
+				xhr.open('POST', 'mailer/smart.php', true)
+
+				xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8')
+
+				xhr.send('name=' + encodeURIComponent(arrInputValue[0]) +
+						'&phone=' + encodeURIComponent(arrInputValue[1]) +
+						'&email=' + encodeURIComponent(arrInputValue[2]))
+			}
+
+			
+
+			
+
+			
 		})
 	}
 
